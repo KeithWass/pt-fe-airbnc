@@ -3,23 +3,30 @@ body {
 }
 
 .App {
-  border: rgb(17, 124, 190);
+  border: 2px solid rgb(17, 124, 190);
   width: 100vw;
   height: 100vh;
   text-align: center;
   display: grid;
-  grid-template-rows: 100px 300px 300px 1fr;
+  grid-template-rows: 150px 150px 1fr;
   grid-template-areas:
     "Header"
-    "FilterBar";
+    "FilterBar"
+    "Main";
 }
 
 .Header {
-  border: rgb(17, 190, 37);
+  border: 2px solid rgb(17, 190, 37);
   grid-area: Header;
 }
 
 .FilterBar {
-  border: rgb(190, 17, 28);
+  border: 2px solid rgb(190, 17, 28);
   grid-area: FilterBar;
+}
+
+.Main {
+  grid-area: Main;
+  border: 2px solid rgb(120, 120, 120);
+  padding: 1rem;
 }
