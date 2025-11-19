@@ -1,19 +1,13 @@
+import { Link } from "react-router-dom";
+
 export default function PropertyCard({ property }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        margin: "10px",
-        padding: "10px",
-        width: "250px",
-        textAlign: "left",
-      }}
-    >
+    <li className="property-card">
       <h3>{property.property_name}</h3>
+      <p>£{property.price_per_night} Per Night </p>
       <p>{property.location}</p>
-      <p>£{property.price_per_night} per night</p>
-      <p>Type: {property.property_type}</p>
-    </div>
+      <p>Host: {property.host}</p>
+      <Link to={`/property/${property.property_id}`}>See more</Link>
+    </li>
   );
 }

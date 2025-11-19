@@ -3,12 +3,11 @@ body {
 }
 
 .App {
-  border: 2px solid rgb(17, 124, 190);
   width: 100vw;
   height: 100vh;
   text-align: center;
   display: grid;
-  grid-template-rows: 150px 150px 1fr;
+  grid-template-rows: 150px 100px 1fr;
   grid-template-areas:
     "Header"
     "FilterBar"
@@ -21,7 +20,7 @@ body {
 }
 
 .FilterBar {
-  border: 2px solid rgb(190, 17, 28);
+  border: 2px solid rgb(44, 92, 214);
   grid-area: FilterBar;
 }
 
@@ -29,4 +28,27 @@ body {
   grid-area: Main;
   border: 2px solid rgb(120, 120, 120);
   padding: 1rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.property-card {
+  box-shadow: 5px 5px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
 }
