@@ -31,9 +31,9 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
         Where:
         <select value={location} onChange={handleLocationChange}>
           <option value="">All</option>
-          <option value="London">London</option>
-          <option value="Manchester">Manchester</option>
-          <option value="Bristol">Bristol</option>
+          <option value="London, UK">London</option>
+          <option value="Manchester, UK">Manchester</option>
+          <option value="Bristol, UK">Bristol</option>
         </select>
       </label>
 
