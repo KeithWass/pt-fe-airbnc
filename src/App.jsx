@@ -1,43 +1,48 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
-
 import Header from "./components/Header";
 import FilterBar from "./components/FilterBar";
 import Homepage from "./pages/Homepage";
 import PropertyPage from "./pages/PropertyPage";
 import AboutPage from "./pages/About";
+import { getProperties } from "./api";
 
 import "./App.css";
 
 function App() {
-  function priceRangeToMinMax(range) {
-    if (range === "0-100") return { minprice: "0", maxprice: "100" };
-    if (range === "100-200") return { minprice: "100", maxprice: "200" };
-    if (range === "200+") return { minprice: "200", maxprice: "" };
-    return {};
-  }
+  const [properties, setProperties] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
+  if (isLoading) {
+    <p>Loading...</p>;
+  }
   const [filters, setFilters] = useState({
-    location: "",
     priceRange: "any",
   });
 
-  const [properties, setProperties] = useState([]);
+  function priceRangeToMinMax(range) {
+    if (range === "0-100") return { minprice: 0, maxprice: 100 };
+    if (range === "100-200") return { minprice: 100, maxprice: 200 };
+    if (range === "200+") return { minprice: 200, maxprice: undefined };
+    return {};
+  }
 
   useEffect(() => {
     const { minprice, maxprice } = priceRangeToMinMax(filters.priceRange);
 
-    axios
-      .get("https://pt-be-airbnc-txl6.onrender.com/api/properties", {
-        params: {
-          location: filters.location || undefined,
-          minprice,
-          maxprice,
-        },
+    setIsLoading(true);
+    if (isLoading) {
+      <p>Loading...</p>;
+    }
+    getProperties({ minprice, maxprice })
+      .then((properties) => {
+        setProperties(properties);
+        setIsLoading(false);
       })
-      .then((res) => setProperties(res.data.properties))
-      .catch(console.error);
+      .catch((err) => {
+        console.error("Error fetching properties:", err);
+        setIsLoading(false);
+      });
   }, [filters]);
 
   return (
@@ -47,15 +52,23 @@ function App() {
           <Header />
         </header>
 
-        <section className="FilterBar">
-          <FilterBar
-            initialFilters={filters}
-            onChange={(updatedFilters) => setFilters(updatedFilters)}
-          />
-        </section>
         <main className="Main">
           <Routes>
-            <Route path="/" element={<Homepage properties={properties} />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  {" "}
+                  <section className="FilterBar">
+                    <FilterBar
+                      initialFilters={filters}
+                      onChange={(updatedFilters) => setFilters(updatedFilters)}
+                    />
+                  </section>
+                  <Homepage properties={properties} isLoading={isLoading} />
+                </>
+              }
+            />
             <Route path="/property/:id" element={<PropertyPage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>

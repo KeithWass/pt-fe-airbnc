@@ -1,17 +1,9 @@
 import { useState } from "react";
 
 export default function FilterBar({ initialFilters = {}, onChange }) {
-  const [location, setLocation] = useState(initialFilters.location || "");
   const [priceRange, setPriceRange] = useState(
     initialFilters.priceRange || "any"
   );
-
-  const handleLocationChange = (e) => {
-    const val = e.target.value;
-    setLocation(val);
-
-    onChange({ location: val, priceRange });
-  };
 
   const handlePriceChange = (e) => {
     const val = e.target.value;
@@ -20,23 +12,12 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
   };
 
   const handleReset = () => {
-    setLocation("");
     setPriceRange("any");
-    onChange({ location: "", priceRange: "any" });
+    onChange({ priceRange: "any" });
   };
 
   return (
     <div className="filter-bar">
-      <label>
-        Where:
-        <select value={location} onChange={handleLocationChange}>
-          <option value="">All</option>
-          <option value="London, UK">London</option>
-          <option value="Manchester, UK">Manchester</option>
-          <option value="Bristol, UK">Bristol</option>
-        </select>
-      </label>
-
       <label>
         Price range:
         <select value={priceRange} onChange={handlePriceChange}>
