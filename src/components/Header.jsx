@@ -8,7 +8,7 @@ export default function Header() {
           <img src="../src/images/logo.png" width={105} height={105} />
         </button>
       </Link>
-      <h1>Welcome to airbnc!</h1>
+      <h1>airbnc</h1>
     </div>
   );
 }
