@@ -1,0 +1,22 @@
+.property-card {
+  /* box-shadow: 0 5px 5px rgba(1, 1, 1, 0.3); */
+
+  /* border: 0.5px solid #ccc; */
+  /* padding: 0.5rem;
+  border-radius: 10px; */
+  overflow: hidden;
+  text-align: left;
+}
+
+.property-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.property-card img:hover {
+  transform: scale(1.04);
+}
