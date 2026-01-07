@@ -1,9 +1,9 @@
 .property-card {
-  /* box-shadow: 0 5px 5px rgba(1, 1, 1, 0.3); */
-
-  /* border: 0.5px solid #ccc; */
-  /* padding: 0.5rem;
-  border-radius: 10px; */
+  font-family: "Helvetica Neue";
+  width: auto;
+  max-width: 27rem;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
   overflow: hidden;
   text-align: left;
 }

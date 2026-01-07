@@ -17,6 +17,8 @@ body {
 .Header {
   color: #ed2222;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   grid-area: Header;
   align-items: center;
   gap: 20px;
@@ -39,17 +41,10 @@ body {
   transform: scale(1.08);
 }
 
-/* .FilterBar {
-  border: 0.8px solid #ccc;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  grid-area: FilterBar;
-  border-radius: 240px;
-} */
-
 .Main {
   grid-area: Main;
 
-  padding: 1rem;
+  padding: 0 8rem;
 }
 
 .filter-bar {
@@ -58,7 +53,7 @@ body {
   border-radius: 40px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   padding: 2rem;
   width: 70%;

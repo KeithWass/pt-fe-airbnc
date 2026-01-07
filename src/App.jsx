@@ -46,7 +46,7 @@ function App() {
   }, [filters]);
 
   return (
-    <div className="App">
+    <div>
       <Router>
         <header className="Header">
           <Header />
