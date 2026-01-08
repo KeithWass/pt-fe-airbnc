@@ -1,0 +1,33 @@
+.FilterBar {
+  background-color: #f9f9f9;
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* grid-area: Header; */
+  align-items: center;
+  gap: 10px;
+  padding: 0rem;
+  padding-bottom: 2rem;
+}
+
+.filter-bar {
+  position: relative;
+  border: 1px solid #fffefe;
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+  width: 70%;
+  margin: auto;
+}
+
+/* .filter-bar::after {
+  content: "";
+  display: block;
+  margin-top: 1rem;
+  height: 1px;
+  background-color: #b4afaf;
+} */

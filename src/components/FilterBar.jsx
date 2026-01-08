@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FilterBar.css";
 
 export default function FilterBar({ initialFilters = {}, onChange }) {
   const [priceRange, setPriceRange, propertyType, setPropertyType] = useState(

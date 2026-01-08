@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-.App {
+/* .App {
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -12,46 +12,12 @@ body {
     "Header"
     "FilterBar"
     "Main";
-}
-
-.FilterBar {
-  background-color: #f9f9f9;
-  display: flex;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-  /* grid-area: Header; */
-  align-items: center;
-  gap: 10px;
-  padding: 0rem;
-  padding-bottom: 2rem;
-}
-
-.filter-bar {
-  position: relative;
-  border: 1px solid #fffefe;
-  background-color: #ffffff;
-  border-radius: 40px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  padding: 1.5rem;
-  width: 70%;
-  margin: auto;
-}
-
-/* .filter-bar::after {
-  content: "";
-  display: block;
-  margin-top: 1rem;
-  height: 1px;
-  background-color: #b4afaf;
 } */
 
 .Main {
   grid-area: Main;
 
-  padding: 2rem;
+  padding: 5rem;
   padding-top: 0rem;
 }
 
@@ -61,7 +27,7 @@ ul {
   padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .property-type {
