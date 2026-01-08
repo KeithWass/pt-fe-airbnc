@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   return (
@@ -8,7 +9,11 @@ export default function Header() {
           <img src="../src/images/logo.svg" width={105} height={105} />
         </button>
       </Link>
-      <h1>airbnc</h1>
+      <Link to="/">
+        <button>
+          <h1>airbnc</h1>
+        </button>
+      </Link>
     </div>
   );
 }

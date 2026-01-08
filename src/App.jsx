@@ -51,7 +51,12 @@ function App() {
         <header className="Header">
           <Header />
         </header>
-
+        <section className="FilterBar">
+          <FilterBar
+            initialFilters={filters}
+            onChange={(updatedFilters) => setFilters(updatedFilters)}
+          />
+        </section>
         <main className="Main">
           <Routes>
             <Route
@@ -59,12 +64,6 @@ function App() {
               element={
                 <>
                   {" "}
-                  <section className="FilterBar">
-                    <FilterBar
-                      initialFilters={filters}
-                      onChange={(updatedFilters) => setFilters(updatedFilters)}
-                    />
-                  </section>
                   <Homepage properties={properties} isLoading={isLoading} />
                 </>
               }

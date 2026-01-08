@@ -5,7 +5,7 @@ body {
 .App {
   width: 100vw;
   height: 100vh;
-  text-align: left;
+  text-align: center;
   display: grid;
   grid-template-rows: 100px 1fr;
   grid-template-areas:
@@ -14,89 +14,54 @@ body {
     "Main";
 }
 
-.Header {
-  color: #ed2222;
+.FilterBar {
+  background-color: #f9f9f9;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  grid-area: Header;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* grid-area: Header; */
   align-items: center;
-  gap: 20px;
-  padding: 1rem 2rem 1rem 2rem;
-}
-
-.Header button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.Header img {
-  display: flex;
-  transition: transform 0.2s ease-in-out;
-}
-
-.Header button img:hover {
-  transform: scale(1.08);
-}
-
-.Main {
-  grid-area: Main;
-
-  padding: 0 8rem;
+  gap: 10px;
+  padding: 0rem;
+  padding-bottom: 2rem;
 }
 
 .filter-bar {
   position: relative;
-  border: 0.8px solid #ccc;
+  border: 1px solid #fffefe;
+  background-color: #ffffff;
   border-radius: 40px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 70%;
   margin: auto;
 }
 
-.filter-bar::after {
+/* .filter-bar::after {
   content: "";
   display: block;
   margin-top: 1rem;
   height: 1px;
   background-color: #b4afaf;
+} */
+
+.Main {
+  grid-area: Main;
+
+  padding: 2rem;
+  padding-top: 0rem;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  padding-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-}
-
-.property-card {
-  font-family: "Helvetica Neue";
-  width: auto;
-  max-width: 27rem;
-  font-size: 0.9rem;
-  padding-bottom: 1rem;
-  overflow: hidden;
-  text-align: left;
-}
-
-.property-card img {
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease-in-out;
-}
-
-.property-card img:hover {
-  transform: scale(1.02);
 }
 
 .property-type {
@@ -185,5 +150,5 @@ ul {
   background-repeat: no-repeat;
   background-size: 1000px 100%;
   animation: shimmer 1.5s infinite linear;
-  border-radius: 4px;
+  border-radius: 10px;
 }
