@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import "./Favourite.css";
+import "./PropertyCard.css";
+import HeartIcon from "../icons/HeartIcon";
 
 export default function Favourite({ propertyId }) {
   const [isFavourited, setIsFavourited] = useState(false);
@@ -21,12 +22,14 @@ export default function Favourite({ propertyId }) {
     setIsFavourited(!isFavourited);
   };
   return (
-    <button
-      onClick={handleToggle}
-      className="favourite-button"
-      aria-label="Toggle favourite"
-    >
-      {isFavourited ? "❤️" : "🤍"}
-    </button>
+    <div>
+      <button
+        className="favourite-button"
+        onClick={handleToggle}
+        aria-label="Toggle favourite"
+      >
+        <HeartIcon filled={isFavourited} />
+      </button>
+    </div>
   );
 }
