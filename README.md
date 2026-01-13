@@ -62,6 +62,7 @@ Endpoints used include:
 ## Live Site
 
 Frontend Deployed Version:
+https://keith-airbnc.netlify.app/
 
 Backend API:
 
