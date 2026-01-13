@@ -6,7 +6,7 @@ export default function Header() {
     <div className="Header">
       <Link to="/">
         <button>
-          <img src="../src/images/logo.svg" width={105} height={105} />
+          <img src="../src/icons/logo.svg" width={105} height={105} />
         </button>
       </Link>
       <Link to="/">

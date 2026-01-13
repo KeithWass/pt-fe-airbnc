@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./PropertyCard.css";
+import "./Favourite";
+import Favourite from "./Favourite";
 
 export default function PropertyCard({ property }) {
   const firstImage = property.images?.[0];
@@ -19,7 +21,7 @@ export default function PropertyCard({ property }) {
       <div className="property-type">
         {property.property_type} in {property.location.split(",")[0]}
       </div>
-
+      <Favourite propertyId={property.property_id} />
       <p>{property.property_name}</p>
       <p>Host: {property.host} </p>
       <p>£{property.price_per_night * 2} for 2 nights </p>
