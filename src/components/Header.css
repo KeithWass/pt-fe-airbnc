@@ -1,30 +1,22 @@
 .Header {
   background-color: #f9f9f9;
-  display: flex;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-  /* grid-area: Header; */
   align-items: center;
-  gap: 10px;
-  padding: 0.5rem;
-}
-
-.Header button {
-  color: #ed2222;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.Header img {
-  /* background-color: #f9f9f9; */
-  height: 55px;
-  width: auto;
   display: flex;
-  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
 }
 
-.Header button img:hover {
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  transition: tranform 0.5s ease-in-out;
+}
+
+.logo:hover {
   transform: scale(1.08);
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
 }
