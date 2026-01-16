@@ -7,8 +7,6 @@ import PropertyPage from "./pages/PropertyPage";
 import AboutPage from "./pages/About";
 import { getProperties } from "./api";
 
-import "./App.css";
-
 function App() {
   const [properties, setProperties] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

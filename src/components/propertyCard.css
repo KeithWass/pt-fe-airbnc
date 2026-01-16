@@ -43,10 +43,18 @@
   transform: scale(1.02);
 }
 
+.property-type-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 450;
+  padding-top: 0.5rem;
+  padding-right: 0.2rem;
+}
+
 .heart-icon {
-  color: white;
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
 
 .heart-icon.filled {

@@ -14,10 +14,10 @@ export default function LogoIcon() {
         />
 
         <text
-          x="1000"
+          x="1100"
           y="650"
           fontFamily="Helvetica"
-          fontSize="550"
+          fontSize="600"
           fill="#ed2222"
           dominantBaseline="middle"
           fontWeight="bold"

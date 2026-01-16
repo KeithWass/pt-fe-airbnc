@@ -33,7 +33,8 @@ export default function PropertyPage() {
       </div>
 
       <h3>
-        <p>{property.location}</p>
+        <div className="property-location-text">{property.location}</div>
+
         <p>£{property.price_per_night}/night</p>
         <p>Host: {property.host}</p>
       </h3>

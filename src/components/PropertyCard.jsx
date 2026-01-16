@@ -21,7 +21,7 @@ export default function PropertyCard({ property }) {
         <Favourite propertyId={property.property_id} />
       </div>
 
-      <div className="property-type">
+      <div className="property-type-text">
         {property.property_type} in {property.location.split(",")[0]}
       </div>
 

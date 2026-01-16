@@ -1,4 +1,5 @@
 import PropertyList from "../components/PropertyList";
+import "./Homepage.css";
 
 import Skeleton from "../components/Skeleton";
 

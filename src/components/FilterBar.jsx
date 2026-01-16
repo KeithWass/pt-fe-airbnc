@@ -56,6 +56,21 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
           <option value="Mansion">Mansion</option>
         </select>
 
+        <div className="filter-divider" />
+
+        <select value={propertyType} onChange={handlePropertyType}>
+          <option value="any">Location Any</option>
+          <option value="Apartment">Apartment</option>
+          <option value="House">House</option>
+          <option value="Studio">Studio</option>
+          <option value="Loft">Loft</option>
+          <option value="Villa">Villa</option>
+          <option value="Cottage">Cottage</option>
+          <option value="Chalet">Chalet</option>
+          <option value="Cabin">Cabin</option>
+          <option value="Mansion">Mansion</option>
+        </select>
+
         <button className="reset-button" onClick={handleReset}>
           Reset
         </button>
