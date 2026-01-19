@@ -1,12 +1,17 @@
 .filter-bar-wrapper {
   background-color: #f9f9f9;
-  padding: 2rem 0;
+  align-items: center;
+  display: flex;
+  padding: 0.5rem 1rem;
+  padding-bottom: 2rem;
+  width: 100%;
 }
-
 .filter-bar {
+  position: relative;
+  border: 1px solid #fffefe;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
 
   background: white;
   border-radius: 999px;
@@ -14,15 +19,20 @@
 
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   width: fit-content;
+  max-width: 900px;
   margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 .filter-bar select {
   border: none;
+  outline: none;
   background: transparent;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
+  min-width: 0;
 }
 
 .filter-bar select:focus {
@@ -46,4 +56,22 @@
 
 .reset-button:hover {
   background-color: #f7f7f7;
+}
+
+@media (max-width: 700px) {
+  .filter-bar {
+    width: 90%;
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 30px;
+  }
+
+  .filter-bar label {
+    font-size: 0.65rem;
+  }
+
+  .filter-bar select {
+    font-size: 0.8rem;
+  }
 }

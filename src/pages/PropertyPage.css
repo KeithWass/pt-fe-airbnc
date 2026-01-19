@@ -1,0 +1,66 @@
+.property-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  line-height: 1;
+  font-weight: 200;
+  padding-top: 2rem;
+}
+
+.image-gallery {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3em auto;
+  display: flex;
+  gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --image-gallery;
+  scroll-snap-type: x mandatory;
+}
+
+.image-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.image-gallery::scroll-button(right),
+.image-gallery::scroll-button(left) {
+  content: ">";
+  border: none;
+  font-size: 3rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  position-anchor: --image-gallery;
+  position-area: right center;
+  translate: -50%;
+}
+
+.image-gallery::scroll-button(left) {
+  content: "<";
+  position-area: left center;
+  translate: 50%;
+}
+
+.image-gallery img {
+  scroll-snap-align: start;
+  width: 90%;
+  height: auto;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .image-gallery img {
+    flex: 0 0 100%;
+  }
+}
+
+.property-location-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: 200;
+}
+
+.host-info {
+  text-align: center;
+}
