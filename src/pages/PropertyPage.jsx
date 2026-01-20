@@ -44,7 +44,7 @@ export default function PropertyPage() {
         ))}
       </div>
 
-      <div className="property-location-text">{property.location}</div>
+      <p className="property-location-text">{property.location}</p>
 
       <p className="price">£{property.price_per_night}/night</p>
 

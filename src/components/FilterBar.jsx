@@ -3,10 +3,10 @@ import "./FilterBar.css";
 
 export default function FilterBar({ initialFilters = {}, onChange }) {
   const [priceRange, setPriceRange] = useState(
-    initialFilters.priceRange || "any"
+    initialFilters.priceRange || "any",
   );
   const [propertyType, setPropertyType] = useState(
-    initialFilters.propertyType || "any"
+    initialFilters.propertyType || "any",
   );
 
   function handlePriceChange(e) {
@@ -35,7 +35,7 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
           onChange={handlePriceChange}
           aria-label="Price Range"
         >
-          <option value="any">Price Any</option>
+          <option value="any">Price</option>
           <option value="0-100">£0 - £100</option>
           <option value="100-200">£100 - £200</option>
           <option value="200+">£200+</option>
@@ -44,7 +44,7 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
         <div className="filter-divider" />
 
         <select value={propertyType} onChange={handlePropertyType}>
-          <option value="any">Property type - Any</option>
+          <option value="any">Property type - any</option>
           <option value="Apartment">Apartment</option>
           <option value="House">House</option>
           <option value="Studio">Studio</option>
@@ -59,7 +59,7 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
         <div className="filter-divider" />
 
         <select value={propertyType} onChange={handlePropertyType}>
-          <option value="any">Location Any</option>
+          <option value="any">Location - any</option>
           <option value="Apartment">Apartment</option>
           <option value="House">House</option>
           <option value="Studio">Studio</option>

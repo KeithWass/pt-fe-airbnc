@@ -47,15 +47,19 @@ function App() {
     <div>
       <Router>
         <Header />
-        <FilterBar
-          initialFilters={filters}
-          onChange={(updatedFilters) => setFilters(updatedFilters)}
-        />
 
         <Routes>
           <Route
             path="/"
-            element={<Homepage properties={properties} isLoading={isLoading} />}
+            element={
+              <>
+                <FilterBar
+                  initialFilters={filters}
+                  onChange={(updatedFilters) => setFilters(updatedFilters)}
+                />
+                <Homepage properties={properties} isLoading={isLoading} />
+              </>
+            }
           />
           <Route path="/property/:id" element={<PropertyPage />} />
           <Route path="/about" element={<AboutPage />} />
