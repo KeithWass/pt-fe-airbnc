@@ -46,30 +46,20 @@ function App() {
   return (
     <div>
       <Router>
-        <header className="Header">
-          <Header />
-        </header>
-        <section className="FilterBar">
-          <FilterBar
-            initialFilters={filters}
-            onChange={(updatedFilters) => setFilters(updatedFilters)}
+        <Header />
+        <FilterBar
+          initialFilters={filters}
+          onChange={(updatedFilters) => setFilters(updatedFilters)}
+        />
+
+        <Routes>
+          <Route
+            path="/"
+            element={<Homepage properties={properties} isLoading={isLoading} />}
           />
-        </section>
-        <main className="Main">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  {" "}
-                  <Homepage properties={properties} isLoading={isLoading} />
-                </>
-              }
-            />
-            <Route path="/property/:id" element={<PropertyPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </main>
+          <Route path="/property/:id" element={<PropertyPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </Router>
     </div>
   );

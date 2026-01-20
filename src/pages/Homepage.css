@@ -1,31 +1,4 @@
-body {
-  margin: 0;
-}
-
-.App {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  display: grid;
-  grid-template-rows: 100px 1fr;
-  grid-template-areas:
-    "Header"
-    "FilterBar"
-    "Main";
-}
-
-.Main {
-  grid-area: Main;
-
-  padding: 4rem;
-  padding-top: 0rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
+/* .homepage {
+  margin: 0 auto;
+  padding: 50px;
+} */

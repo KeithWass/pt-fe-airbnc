@@ -6,5 +6,9 @@ import Skeleton from "../components/Skeleton";
 export default function Homepage({ properties, isLoading }) {
   if (isLoading) return <Skeleton />;
 
-  return <PropertyList properties={properties} />;
+  return (
+    <div className="homepage">
+      <PropertyList properties={properties} />;
+    </div>
+  );
 }

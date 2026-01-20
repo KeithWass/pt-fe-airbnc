@@ -1,4 +1,5 @@
 import "./Skeleton.css";
+import "./PropertyList";
 
 export default function Skeleton() {
   const skeletonArr = Array(20).fill(0);

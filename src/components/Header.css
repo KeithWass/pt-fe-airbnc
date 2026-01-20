@@ -2,12 +2,13 @@
   background-color: #f9f9f9;
   align-items: center;
   display: flex;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   width: 100%;
 }
 
 .logo {
   height: 50px;
+
   width: auto;
   cursor: pointer;
   transition: tranform 0.5s ease-in-out;
