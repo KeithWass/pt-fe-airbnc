@@ -8,6 +8,9 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
   const [propertyType, setPropertyType] = useState(
     initialFilters.propertyType || "any",
   );
+  const [propertyLocation, setPropertyLocation] = useState(
+    initialFilters.propertyLocation || "any",
+  );
 
   function handlePriceChange(e) {
     const val = e.target.value;
@@ -21,10 +24,20 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
     onChange({ ...initialFilters, propertyType: val });
   }
 
+  function handlePropertyLocation(e) {
+    const val = e.target.value;
+    setPropertyLocation(val);
+    onChange({ ...initialFilters, propertyLocation: val });
+  }
+
   function handleReset() {
     setPriceRange("any");
     setPropertyType("any");
-    onChange({ priceRange: "any", propertyType: "any" });
+    onChange({
+      priceRange: "any",
+      propertyType: "any",
+      propertyLocation: "any",
+    });
   }
 
   return (
@@ -58,17 +71,19 @@ export default function FilterBar({ initialFilters = {}, onChange }) {
 
         <div className="filter-divider" />
 
-        <select value={propertyType} onChange={handlePropertyType}>
+        <select value={propertyLocation} onChange={handlePropertyLocation}>
           <option value="any">Location - any</option>
-          <option value="Apartment">Apartment</option>
-          <option value="House">House</option>
-          <option value="Studio">Studio</option>
-          <option value="Loft">Loft</option>
-          <option value="Villa">Villa</option>
-          <option value="Cottage">Cottage</option>
-          <option value="Chalet">Chalet</option>
-          <option value="Cabin">Cabin</option>
-          <option value="Mansion">Mansion</option>
+          <option value="London">London</option>
+          <option value="Manchester">Manchester</option>
+          <option value="Brighton">Brighton</option>
+          <option value="Birmingham">Biringham</option>
+          <option value="Bristol">Bristol</option>
+          <option value="Cornwall">Cornwall</option>
+          <option value="Lake District">Lake District</option>
+          <option value="Cambridge">Cambridge</option>
+          <option value="Swansea">Swansea</option>
+          <option value="Scotland">Scotland</option>
+          <option value="Eryri">Eryri</option>
         </select>
 
         <button className="reset-button" onClick={handleReset}>

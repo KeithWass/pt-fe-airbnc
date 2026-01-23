@@ -16,6 +16,8 @@ function App() {
   }
   const [filters, setFilters] = useState({
     priceRange: "any",
+    propertyType: "any",
+    propertyLocation: "any",
   });
 
   function priceRangeToMinMax(range) {
