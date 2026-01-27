@@ -64,6 +64,8 @@ Endpoints used include:
 Frontend Deployed Version:
 https://keith-airbnc.netlify.app/
 
+This is still a work in progress and I continue to make regular commits.
+
 Backend API:
 
 https://pt-be-airbnc-txl6.onrender.com
