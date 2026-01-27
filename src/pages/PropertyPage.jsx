@@ -43,24 +43,21 @@ export default function PropertyPage() {
           <img key={i} src={img} alt={`Image ${i}`} />
         ))}
       </div>
-
       <p className="property-location-text">{property.location}</p>
-
-      <p className="price">£{property.price_per_night}/night</p>
-
       {host && (
         <div className="host-info">
           <p>
-            Hosted by {host.first_name}
-            {host.surname}
+            <img
+              src={host.avatar}
+              alt={`${host.first_name} ${host.surname}`}
+              className="host_avatar"
+            />
           </p>
-          <img
-            src={host.avatar}
-            alt={`${host.first_name} ${host.surname}`}
-            className="host_avatar"
-          />
+          <p>Stay with {host.first_name}</p>
         </div>
       )}
+
+      <p className="price">£{property.price_per_night}/night</p>
     </div>
   );
 }

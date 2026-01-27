@@ -66,6 +66,18 @@
   font-weight: 200;
 }
 
-.host-info img {
-  text-align: center;
+.host-info {
+  font-weight: 450;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.host_avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
