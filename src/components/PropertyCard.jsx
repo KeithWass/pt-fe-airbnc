@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./PropertyCard.css";
 import Favourite from "./Favourite";
+import { getReviewsByPropertyId } from "../api";
 
 export default function PropertyCard({ property }) {
   const firstImage = property.images?.[0];
@@ -27,7 +28,7 @@ export default function PropertyCard({ property }) {
 
       <p>{property.property_name}</p>
       <p>Host: {property.host} </p>
-      <p>£{property.price_per_night * 2} for 2 nights </p>
+      <p>£{property.price_per_night * 2} for 2 nights ݀ ✩ </p>
     </li>
   );
 }

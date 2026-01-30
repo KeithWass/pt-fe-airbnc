@@ -7,7 +7,7 @@
 .property-name {
   font-size: 29px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -78,6 +78,48 @@
 .host_avatar {
   width: 56px;
   height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 3rem 0 2rem;
+}
+.review-card {
+  font-family: "Helvetica Neue";
+  width: auto;
+  max-width: 27rem;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  min-height: 30px;
+  justify-content: space-between;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.review-author {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.guest_avatar {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }

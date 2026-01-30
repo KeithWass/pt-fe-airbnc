@@ -18,3 +18,9 @@ export const getUserById = async (id) => {
 
   return data.user;
 };
+
+export const getReviewsByPropertyId = async (id) => {
+  const { data } = await axios.get(`${BASE_URL}/properties/${id}/reviews`);
+
+  return data.reviews;
+};
