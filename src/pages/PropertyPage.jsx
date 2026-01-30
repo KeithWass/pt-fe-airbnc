@@ -27,7 +27,7 @@ export default function PropertyPage() {
         setProperty(p);
         return Promise.all([
           getUserById(p.host_id),
-          getReviewsByPropertyId(id),
+          getReviewsByPropertyId(id).catch(() => []),
         ]);
       })
       .then(([user, reviews]) => {
@@ -57,13 +57,12 @@ export default function PropertyPage() {
       <p className="property-location-text">{property.location}</p>
       {host && (
         <div className="host-info">
-          <p>
-            <img
-              src={host.avatar}
-              alt={`${host.first_name} ${host.surname}`}
-              className="host_avatar"
-            />
-          </p>
+          <img
+            src={host.avatar}
+            alt={`${host.first_name} ${host.surname}`}
+            className="host_avatar"
+          />
+
           <p>Stay with {host.first_name}</p>
         </div>
       )}

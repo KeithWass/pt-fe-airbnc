@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./PropertyCard.css";
 import Favourite from "./Favourite";
-import { getReviewsByPropertyId } from "../api";
 
 export default function PropertyCard({ property }) {
   const firstImage = property.images?.[0];
